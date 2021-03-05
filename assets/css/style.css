@@ -23,7 +23,9 @@ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 */
 
 /* VARIÁVEIS */
-:root{}
+:root{
+        
+}
 /* VARIÁVEIS */
   
   
@@ -33,10 +35,23 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, a{
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     text-decoration: none;
+    /* color:#ffffff */
 }
+
+
+figcaption {
+    display: none;
+}
+
+
+
+.container {
+    padding: 0 30px;
+}
+
 /* GERAL */
-  
 
 /* HTML */
 html{}
@@ -44,22 +59,305 @@ html{}
   
 
 /* BODY */
-body{}
+body{
+    background-color: #141414;
+    
+}
 /* BODY */
   
 
 /* HEADER */
-header{}
+header{
+    height:7vh;
+    display: flex;
+    flex-direction: row;
+    
+
+}
+    header .container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(0,0,0,.7) 10%, rgba(0,0,0,0));
+    }
+
+
+    header .container .flex {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+    }
+
+            header .container .flex .flex-column .logo figure img {
+                width: 70px;
+            }
+
+            header .container .flex .flex-column .menu-usuario .usuario {
+                width: 28px;
+            }
+
+                header .container .flex .flex-column .menu-usuario .usuario img {
+                    border-radius: 20%;
+                }
+
+            header .container .flex .flex-column .menu-usuario .pesquisar{
+                display:none;
+            }
+
+        header .container .flex .flex-column{
+            display:flex;
+            flex-direction: row;
+            
+        }
+
+        header .container .flex .flex-column:nth-of-type(1) {
+            width: 35%;
+            
+        }
+
+        header .container .flex .flex-column:nth-of-type(2) {
+            width: 55%;
+        }
+
+        header .container .flex .flex-column:nth-of-type(3) {
+            width: 20%;
+            justify-content: flex-end;
+          
+        }
+
+        header .container .flex .flex-column nav {
+            display: flex;
+            flex-direction: row;
+        }
+
+        header .container .flex .flex-column nav img{
+            display: flex;
+            flex-direction: row;
+        }
+
+        header .container .flex .flex-column nav img:hover ~ ul {
+            display: inline-block;
+        }
+
+      
+
+        header .container .flex .flex-column nav span {
+            padding-top: 3px;
+            font-size: 14px;
+            color: #e5e5e5;
+        }
+
+        header .container .flex .flex-column nav ul {
+            margin-top: 5vh;
+            position: absolute;
+            display: none;
+            background-color:rgba(109,109,110,0.7);
+            width:200px;
+        }
+
+            header .container .flex .flex-column nav ul li {
+            border: solid 1px rgba(109,109,110,0.4);
+            }
+
+                       
+                header .container .flex .flex-column nav ul li a {
+                    padding-left: 5px;
+                    font-size: 12px;
+                }
+
+            header .container .flex .flex-column nav ul li.item-ativo a {
+                font-weight: bold;
+                color: #ffffff
+            }
+
+
 /* HEADER */
   
 
 /* FOOTER */
 footer{}
+
+    footer .container .flex .flex-column nav ul {
+        padding-top: 60px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+
+            footer .container .flex .flex-column nav ul li {
+                width: 50%;
+                padding-bottom: 10px;
+            }
+
+
+
+                footer .container .flex .flex-column nav ul li a{
+                    font-size: 13px;
+                    color: grey;
+                    font-weight: bold;
+                }
+
+                footer .container .flex .flex-column .redes-sociais li a img {
+                    width: 20px;
+                }
+
+     
+        footer .container .flex .flex-column .redes-sociais {
+            padding-top: 30px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            padding-bottom: 20px;
+        }
+
+                footer .container .flex .flex-column .redes-sociais li a {
+                    padding-right: 30px;                 
+                }
+
+
+
+        footer .container .copyright{
+            font-size: 11px;
+            color: grey;
+            padding-bottom: 10px;
+        } 
+    
 /* FOOTER */
 
   
 /* INICIAL */
-main{}
+
+    main .secao-destaque  .container .secao-destaque-conteudo .assistir {
+        background-color: #ffffff;
+        color: #000000;
+        border: none;
+        border-radius: 5px;
+        height: 25px;
+        width: 90px;
+        font-weight: bold;
+        margin-right: 5px;
+    }
+
+        main .secao-destaque .container .secao-destaque-conteudo .assistir:hover {
+            background-color: rgba(255,255,255,0.75);
+            
+        }
+
+    main .secao-destaque .container .secao-destaque-conteudo .mais-informacoes {
+        background-color: rgba(109,109,110,0.7);
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        height: 25px;
+        width: 130px;
+        font-weight: bold;
+    }
+        main  .secao-destaque .container .secao-destaque-conteudo .mais-informacoes:hover {
+            background-color: rgba(109,109,110,0.4);
+            
+        }
+
+        main .secao-destaque{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: -7vh;
+            height: 56.25vw;
+            min-height: 250px ;
+            width: 100%;
+            background-image: url("../img/movies/ted.webp");
+            background-attachment:local;
+            background-size:100% 100%;
+            background-repeat: no-repeat;
+       }
+
+       main .secao-destaque .container{ 
+           padding-top: 15px;
+            align-items: center;
+       }
+        
+        main .secao-destaque .container #logodestaque {
+            width: 160px;
+            padding-top: 25px;
+            margin-bottom: 5px;
+        }
+
+        main .secao-destaque .container p {
+            width: 65%;
+            font-size: 12px;
+            text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+            color:#ffffff
+        }
+
+        main .secao-destaque .container .secao-destaque-buttons {
+            display: flex;
+            flex-direction: row;
+            padding: 5px 0;
+        }
+
+        main .secao-destaque .container .secao-destaque-buttons button {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+            main .secao-destaque .container .secao-destaque-buttons img {
+                padding-right: 5px;
+                width: 10px;
+            }
+
+            main .secao-destaque .container .secao-destaque-buttons button h5 {
+                font-size: 12px;
+            }
+    
+ 
+
+    main #secao-continuar-assistindo {
+        background: linear-gradient(to bottom,rgba(20,20,20,0) 0,rgba(20,20,20,.15) 15%,rgba(20,20,20,.35) 29%,rgba(20,20,20,.58) 44%,#141414 68%,#141414 100%);
+        margin-top: -5vw;
+    }
+
+            main .secao-catalogo .container h2{
+                color: #e5e5e5;
+                font-size: 17px;
+                padding-top: 5px;
+                padding-bottom: 2px;
+            }
+
+            main .secao-catalogo .flex {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+                main .secao-catalogo .flex li {
+                    width: 50%;
+                    
+                }
+                    main .secao-catalogo .flex li figure {
+                        padding: 0 2px;
+                    }
+
+
+                        main .secao-catalogo .flex li figure img {
+                            width: 100%;
+                            border-radius: 10px;
+
+                        }
+
+                        main .secao-catalogo .flex li figure.dois {
+                            display:none
+                        }
+
+                 
+
+
 /* INICIAL */
   
 
@@ -76,8 +374,239 @@ main{}
 /* EXTRAS */
   
 
-/* MEDIA QUERIES */
-@media screen and (min-width: 400px){}
+/* MEDIA QUERIES------------------------------------------------------------------ */
 
-@media screen and (min-width: 800px){}
+@media (min-width: 800px) {
+
+    .container {
+    padding: 0 60px ;
+    }
+
+header {
+    height:12vh;  
+}
+
+
+header .container .flex .flex-column:nth-of-type(1) {
+    width: 15%;
+    
+}
+
+header .container .flex .flex-column:nth-of-type(2) {
+    width: 75%;
+}
+
+header .container .flex .flex-column:nth-of-type(3) {
+    width: 10%;
+    justify-content: flex-end;
+ }
+
+    header .container .flex .flex-column:nth-of-type(3) .menu-usuario {
+        align-items: center;
+    }
+
+        header .container .flex .flex-column:nth-of-type(3) .menu-usuario .pesquisar {
+            padding-top: 8px;
+        }
+
+
+
+
+        header .container .flex .flex-column nav span {
+            display: none;
+        
+        }
+
+
+        header .container .flex .flex-column nav img{
+            display: none;
+        }
+
+        header .container .flex .flex-column nav ul {
+            margin-top: 0;
+            position:unset;
+            display: flex;
+            flex-direction: row;
+            background-color:transparent;
+            width:100%;
+        }
+
+        header .container .flex .flex-column nav ul li {
+            border:none;
+            }
+            
+                header .container .flex .flex-column nav ul li a {
+                    padding-left: 15px;
+                    font-size: 14px;
+                    color: #e5e5e5;
+                }
+
+                header .container .flex .flex-column nav ul li a:hover {
+                    color: #b3b3b3;
+                }
+                
+                /* header .container .flex .flex-column nav ul li a:active {
+                    color: #ffffff;
+                } */
+
+   
+            header .container .flex .flex-column .menu-usuario {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+
+            header .container .flex .flex-column .logo figure img {
+                width: 92px;
+            }
+
+            header .container .flex .flex-column .menu-usuario .usuario {
+                width: 28px;
+                display: flex;
+                flex-direction: row;
+            }
+
+            header .container .flex .flex-column .menu-usuario .pesquisar{
+                display:block;
+            }
+
+
+/* -------------Main------------------ */
+   
+main .secao-destaque{
+    margin-top: -12vh;
+}
+
+   
+        main .secao-destaque  .container .secao-destaque-conteudo .assistir {
+            height: 40px;
+            width: 140px;
+            margin-right: 10px;
+        }
+        
+        main .secao-destaque .container .secao-destaque-conteudo .mais-informacoes {
+            height: 40px;
+            width: 240px;
+        }
+
+       
+
+    main .secao-destaque .container p {
+        width: 650px;
+        font-size: 26px;
+        padding-bottom: 30px;
+    }
+
+        main .secao-destaque .container #logodestaque {
+            width: 650px;
+            padding-top: 25px;
+            margin-bottom: 30px;
+        }
+
+
+        main .secao-destaque .container .secao-destaque-buttons button h5 {
+            font-size: 22px;
+        }
+
+        main .secao-destaque .container .secao-destaque-buttons img {
+            width: 20px;
+        }
+
+
+        main .secao-catalogo .flex li {
+            width: 287px;
+                       
+        }
+
+        main .secao-catalogo .flex li figure {
+            padding: 0 1px;
+        }
+
+        main .secao-catalogo .flex li figure.um {
+            display:none;
+        }
+
+        main .secao-catalogo .flex li figure.dois {
+            display:block;
+        }
+
+
+            main .secao-catalogo .flex li figure img {
+                width: 100%;
+                border-radius: 10px;
+
+            }
+/* --------------------footer--------------------------------------------------- */
+
+footer{
+    margin-top: 70px;
+
+}
+
+
+    footer .container .flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;    
+        border-top: 1px solid rgb(128 128 128 / 26%);
+        padding-top: 30px;
+        margin: 0 60px;
+    }
+
+        footer .container .flex .flex-column{
+            width: 50%;
+        } 
+
+
+            footer .container .flex .flex-column nav ul {
+                padding-top: 0px;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+            
+        
+                    footer .container .flex .flex-column nav ul li {
+                        width: 50%;
+                        padding-bottom: 10px;
+                    }
+        
+    footer .container .flex .flex-column .redes-sociais {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 0px;
+        width: 100%;
+        padding-bottom: 0px;
+    }
+
+    footer .container .copyright{
+        padding-top: 50px;
+       
+    }    
+        
+                      
+        
+        
+        
+    }
+
+    @media (min-width: 1735px) {
+        
+        .container {
+            max-width: 1735px;
+            padding: 0 0px ;
+            }
+
+    }
+
+
+
+
+
+
+
+
+
 /* MEDIA QUERIES */
